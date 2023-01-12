@@ -18,7 +18,7 @@ const RecipeSide = ({ recipeId }) => {
     if (recipeId) {
       async function fetchData() {
         const response = await axios.get(
-          `https://fullforkify.onrender.com/api/v1/recipes/${recipeId}`
+          `https://fullforkify-api.onrender.com/api/v1/recipes/${recipeId}`
         );
         const allData = response.data;
         setData(allData.recipe);

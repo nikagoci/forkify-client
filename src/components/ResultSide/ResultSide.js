@@ -20,7 +20,7 @@ const ResultSide = ({ setRecipeId }) => {
     async function fetchData() {
       if (ctx.query) {
         const response = await axios.get(
-          `https://fullforkify.onrender.com/api/v1/recipes?limit=9&page=${page}&recipe=${ctx.query}`
+          `https://fullforkify-api.onrender.com/api/v1/recipes?limit=9&page=${page}&recipe=${ctx.query}`
         );
         const allData = response.data;
         setData(allData.recipes);
@@ -34,7 +34,7 @@ const ResultSide = ({ setRecipeId }) => {
     async function fetchData() {
       if (ctx.query) {
         const allResponse = await axios.get(
-          `https://fullforkify.onrender.com/api/v1/recipes?&recipe=${ctx.query}`
+          `https://fullforkify-api.onrender.com/api/v1/recipes?&recipe=${ctx.query}`
         )
 
         setAllRecipe(allResponse.data.length);

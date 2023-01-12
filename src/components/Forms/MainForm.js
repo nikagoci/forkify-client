@@ -1,7 +1,7 @@
 import { Stack } from "@mui/system";
 import { Button, Typography } from "@mui/material";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import FormData from "./FormData";
 import FormIngredients from "./FormIngredients";
 
@@ -69,7 +69,7 @@ const MainForm = ({setRecipeId}) => {
   const addRecipe = async (data) => {
     try {
       const response = await axios.post(
-        "https://fullforkify.onrender.com/api/v1/recipes",
+        "https://fullforkify-api.onrender.com/api/v1/recipes",
         data
       );
       return response;
